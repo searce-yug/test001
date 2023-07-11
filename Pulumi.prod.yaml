@@ -1,0 +1,3 @@
+config:
+  github:repo: searce-yug/helm-dashboard
+  pulumi:repo: github.com/searce-yug/blog-app

@@ -1,0 +1,112 @@
+{
+    "version": 3,
+    "deployment": {
+        "manifest": {
+            "time": "2023-07-05T09:25:24.979115807Z",
+            "magic": "b5474f4f11c814c2c5b366a0bf2cbd20040e2d7a1d7827413d1432d468437683",
+            "version": "v3.73.0"
+        },
+        "secrets_providers": {
+            "type": "service",
+            "state": {
+                "url": "https://api.pulumi.com",
+                "owner": "searce-yug",
+                "project": "pulum",
+                "stack": "dev"
+            }
+        },
+        "resources": [
+            {
+                "urn": "urn:pulumi:dev::pulum::pulumi:pulumi:Stack::pulum-dev",
+                "custom": false,
+                "type": "pulumi:pulumi:Stack",
+                "created": "2023-07-05T09:22:47.79505501Z",
+                "modified": "2023-07-05T09:22:47.79505501Z"
+            },
+            {
+                "urn": "urn:pulumi:dev::pulum::pulumi:providers:gcp::default_6_59_0",
+                "custom": true,
+                "id": "d4be65f7-8c1f-4bc6-9924-3e1abe2c225a",
+                "type": "pulumi:providers:gcp",
+                "inputs": {
+                    "project": "nikhils-playground-010897",
+                    "version": "6.59.0"
+                },
+                "outputs": {
+                    "project": "nikhils-playground-010897",
+                    "version": "6.59.0"
+                },
+                "created": "2023-07-05T09:22:49.491419048Z",
+                "modified": "2023-07-05T09:22:49.491419048Z"
+            },
+            {
+                "urn": "urn:pulumi:dev::pulum::gcp:pubsub/topic:Topic::example",
+                "custom": true,
+                "id": "projects/nikhils-playground-010897/topics/topic-1",
+                "type": "gcp:pubsub/topic:Topic",
+                "inputs": {
+                    "__defaults": [],
+                    "labels": {
+                        "__defaults": [],
+                        "foo": "bar"
+                    },
+                    "messageRetentionDuration": "86600s",
+                    "name": "topic-1"
+                },
+                "outputs": {
+                    "__meta": "{\"e2bfb730-ecaa-11e6-8f88-34363bc7c4c0\":{\"create\":1200000000000,\"delete\":1200000000000,\"update\":1200000000000}}",
+                    "id": "projects/nikhils-playground-010897/topics/topic-1",
+                    "kmsKeyName": "",
+                    "labels": {
+                        "foo": "bar"
+                    },
+                    "messageRetentionDuration": "86600s",
+                    "messageStoragePolicy": null,
+                    "name": "topic-1",
+                    "project": "nikhils-playground-010897",
+                    "schemaSettings": null
+                },
+                "parent": "urn:pulumi:dev::pulum::pulumi:pulumi:Stack::pulum-dev",
+                "provider": "urn:pulumi:dev::pulum::pulumi:providers:gcp::default_6_59_0::d4be65f7-8c1f-4bc6-9924-3e1abe2c225a",
+                "propertyDependencies": {
+                    "labels": null,
+                    "messageRetentionDuration": null,
+                    "name": null
+                }
+            },
+            {
+                "urn": "urn:pulumi:dev::pulum::gcp:serviceAccount/account:Account::serviceAccount",
+                "custom": true,
+                "id": "projects/nikhils-playground-010897/serviceAccounts/example-state@nikhils-playground-010897.iam.gserviceaccount.com",
+                "type": "gcp:serviceAccount/account:Account",
+                "inputs": {
+                    "__defaults": [
+                        "disabled"
+                    ],
+                    "accountId": "example-state",
+                    "disabled": false,
+                    "displayName": "Service Account"
+                },
+                "outputs": {
+                    "__meta": "{\"e2bfb730-ecaa-11e6-8f88-34363bc7c4c0\":{\"create\":300000000000}}",
+                    "accountId": "example-state",
+                    "description": "",
+                    "disabled": false,
+                    "displayName": "Service Account",
+                    "email": "example-state@nikhils-playground-010897.iam.gserviceaccount.com",
+                    "id": "projects/nikhils-playground-010897/serviceAccounts/example-state@nikhils-playground-010897.iam.gserviceaccount.com",
+                    "member": "serviceAccount:example-state@nikhils-playground-010897.iam.gserviceaccount.com",
+                    "name": "projects/nikhils-playground-010897/serviceAccounts/example-state@nikhils-playground-010897.iam.gserviceaccount.com",
+                    "project": "nikhils-playground-010897",
+                    "uniqueId": "110036241680050112276"
+                },
+                "parent": "urn:pulumi:dev::pulum::pulumi:pulumi:Stack::pulum-dev",
+                "provider": "urn:pulumi:dev::pulum::pulumi:providers:gcp::default_6_59_0::d4be65f7-8c1f-4bc6-9924-3e1abe2c225a",
+                "propertyDependencies": {
+                    "accountId": null,
+                    "displayName": null
+                }
+            }
+        ]
+    }
+}

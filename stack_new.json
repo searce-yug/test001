@@ -1,0 +1,315 @@
+{
+    "version": 3,
+    "deployment": {
+        "manifest": {
+            "time": "2023-07-05T10:19:07.765255669Z",
+            "magic": "b5474f4f11c814c2c5b366a0bf2cbd20040e2d7a1d7827413d1432d468437683",
+            "version": "v3.73.0"
+        },
+        "secrets_providers": {
+            "type": "service",
+            "state": {
+                "url": "https://api.pulumi.com",
+                "owner": "searce-yug",
+                "project": "pulum",
+                "stack": "dev"
+            }
+        },
+        "resources": [
+            {
+                "urn": "urn:pulumi:dev::pulum::pulumi:pulumi:Stack::pulum-dev",
+                "custom": false,
+                "type": "pulumi:pulumi:Stack",
+                "created": "2023-07-05T09:22:47.79505501Z",
+                "modified": "2023-07-05T09:22:47.79505501Z"
+            },
+            {
+                "urn": "urn:pulumi:dev::pulum::pulumi:providers:gcp::default_6_59_0",
+                "custom": true,
+                "id": "d4be65f7-8c1f-4bc6-9924-3e1abe2c225a",
+                "type": "pulumi:providers:gcp",
+                "inputs": {
+                    "project": "nikhils-playground-010897",
+                    "version": "6.59.0"
+                },
+                "outputs": {
+                    "project": "nikhils-playground-010897",
+                    "version": "6.59.0"
+                },
+                "created": "2023-07-05T09:22:49.491419048Z",
+                "modified": "2023-07-05T09:22:49.491419048Z"
+            },
+            {
+                "urn": "urn:pulumi:dev::pulum::gcp:pubsub/topic:Topic::example",
+                "custom": true,
+                "id": "projects/nikhils-playground-010897/topics/topic-1",
+                "type": "gcp:pubsub/topic:Topic",
+                "inputs": {
+                    "__defaults": [],
+                    "labels": {
+                        "__defaults": [],
+                        "foo": "bar"
+                    },
+                    "messageRetentionDuration": "86600s",
+                    "name": "topic-1"
+                },
+                "outputs": {
+                    "__meta": "{\"e2bfb730-ecaa-11e6-8f88-34363bc7c4c0\":{\"create\":1200000000000,\"delete\":1200000000000,\"update\":1200000000000}}",
+                    "id": "projects/nikhils-playground-010897/topics/topic-1",
+                    "kmsKeyName": "",
+                    "labels": {
+                        "foo": "bar"
+                    },
+                    "messageRetentionDuration": "86600s",
+                    "messageStoragePolicy": null,
+                    "name": "topic-1",
+                    "project": "nikhils-playground-010897",
+                    "schemaSettings": null
+                },
+                "parent": "urn:pulumi:dev::pulum::pulumi:pulumi:Stack::pulum-dev",
+                "provider": "urn:pulumi:dev::pulum::pulumi:providers:gcp::default_6_59_0::d4be65f7-8c1f-4bc6-9924-3e1abe2c225a",
+                "propertyDependencies": {
+                    "labels": null,
+                    "messageRetentionDuration": null,
+                    "name": null
+                }
+            },
+            {
+                "urn": "urn:pulumi:dev::pulum::gcp:serviceAccount/account:Account::serviceAccount",
+                "custom": true,
+                "id": "projects/nikhils-playground-010897/serviceAccounts/example-state@nikhils-playground-010897.iam.gserviceaccount.com",
+                "type": "gcp:serviceAccount/account:Account",
+                "inputs": {
+                    "__defaults": [
+                        "disabled"
+                    ],
+                    "accountId": "example-state",
+                    "disabled": false,
+                    "displayName": "Service Account"
+                },
+                "outputs": {
+                    "__meta": "{\"e2bfb730-ecaa-11e6-8f88-34363bc7c4c0\":{\"create\":300000000000}}",
+                    "accountId": "example-state",
+                    "description": "",
+                    "disabled": false,
+                    "displayName": "Service Account",
+                    "email": "example-state@nikhils-playground-010897.iam.gserviceaccount.com",
+                    "id": "projects/nikhils-playground-010897/serviceAccounts/example-state@nikhils-playground-010897.iam.gserviceaccount.com",
+                    "member": "serviceAccount:example-state@nikhils-playground-010897.iam.gserviceaccount.com",
+                    "name": "projects/nikhils-playground-010897/serviceAccounts/example-state@nikhils-playground-010897.iam.gserviceaccount.com",
+                    "project": "nikhils-playground-010897",
+                    "uniqueId": "110036241680050112276"
+                },
+                "parent": "urn:pulumi:dev::pulum::pulumi:pulumi:Stack::pulum-dev",
+                "provider": "urn:pulumi:dev::pulum::pulumi:providers:gcp::default_6_59_0::d4be65f7-8c1f-4bc6-9924-3e1abe2c225a",
+                "propertyDependencies": {
+                    "accountId": null,
+                    "displayName": null
+                }
+            },
+            {
+                "urn": "urn:pulumi:dev::pulum::gcp:serviceAccount/account:Account::gti-terraform",
+                "custom": true,
+                "id": "projects/nikhils-playground-010897/serviceAccounts/gti-terraform@nikhils-playground-010897.iam.gserviceaccount.com",
+                "type": "gcp:serviceAccount/account:Account",
+                "inputs": {
+                    "__defaults": [],
+                    "accountId": "gti-terraform",
+                    "displayName": "gti-terraform",
+                    "project": "nikhils-playground-010897"
+                },
+                "outputs": {
+                    "__meta": "{\"e2bfb730-ecaa-11e6-8f88-34363bc7c4c0\":{\"create\":300000000000}}",
+                    "accountId": "gti-terraform",
+                    "description": "",
+                    "disabled": false,
+                    "displayName": "gti-terraform",
+                    "email": "gti-terraform@nikhils-playground-010897.iam.gserviceaccount.com",
+                    "id": "projects/nikhils-playground-010897/serviceAccounts/gti-terraform@nikhils-playground-010897.iam.gserviceaccount.com",
+                    "member": "serviceAccount:gti-terraform@nikhils-playground-010897.iam.gserviceaccount.com",
+                    "name": "projects/nikhils-playground-010897/serviceAccounts/gti-terraform@nikhils-playground-010897.iam.gserviceaccount.com",
+                    "project": "nikhils-playground-010897",
+                    "uniqueId": "108555309565412640092"
+                },
+                "parent": "urn:pulumi:dev::pulum::pulumi:pulumi:Stack::pulum-dev",
+                "protect": true,
+                "provider": "urn:pulumi:dev::pulum::pulumi:providers:gcp::default_6_59_0::d4be65f7-8c1f-4bc6-9924-3e1abe2c225a",
+                "created": "2023-07-05T10:19:07.528948485Z",
+                "modified": "2023-07-05T10:19:07.528948485Z"
+            },
+            {
+                "urn": "urn:pulumi:dev::pulum::gcp:compute/instance:Instance::pulumi",
+                "custom": true,
+                "id": "projects/nikhils-playground-010897/zones/asia-south1-c/instances/pulumi",
+                "type": "gcp:compute/instance:Instance",
+                "inputs": {
+                    "__defaults": [],
+                    "bootDisk": {
+                        "__defaults": [],
+                        "deviceName": "pulumi",
+                        "initializeParams": {
+                            "__defaults": [],
+                            "image": "https://www.googleapis.com/compute/beta/projects/debian-cloud/global/images/debian-11-bullseye-v20230615",
+                            "size": 10,
+                            "type": "pd-balanced"
+                        },
+                        "source": "https://www.googleapis.com/compute/v1/projects/nikhils-playground-010897/zones/asia-south1-c/disks/pulumi"
+                    },
+                    "confidentialInstanceConfig": {
+                        "__defaults": [],
+                        "enableConfidentialCompute": false
+                    },
+                    "machineType": "e2-micro",
+                    "name": "pulumi",
+                    "networkInterfaces": [
+                        {
+                            "__defaults": [],
+                            "accessConfigs": [
+                                {
+                                    "__defaults": [],
+                                    "natIp": "35.244.53.147",
+                                    "networkTier": "PREMIUM"
+                                }
+                            ],
+                            "network": "https://www.googleapis.com/compute/v1/projects/nikhils-playground-010897/global/networks/default",
+                            "networkIp": "10.160.0.2",
+                            "stackType": "IPV4_ONLY",
+                            "subnetwork": "https://www.googleapis.com/compute/v1/projects/nikhils-playground-010897/regions/asia-south1/subnetworks/default",
+                            "subnetworkProject": "nikhils-playground-010897"
+                        }
+                    ],
+                    "project": "nikhils-playground-010897",
+                    "reservationAffinity": {
+                        "__defaults": [],
+                        "type": "ANY_RESERVATION"
+                    },
+                    "scheduling": {
+                        "__defaults": [],
+                        "onHostMaintenance": "MIGRATE",
+                        "provisioningModel": "STANDARD"
+                    },
+                    "serviceAccount": {
+                        "__defaults": [],
+                        "email": "776508433270-compute@developer.gserviceaccount.com",
+                        "scopes": [
+                            "https://www.googleapis.com/auth/devstorage.read_only",
+                            "https://www.googleapis.com/auth/logging.write",
+                            "https://www.googleapis.com/auth/service.management.readonly",
+                            "https://www.googleapis.com/auth/servicecontrol",
+                            "https://www.googleapis.com/auth/trace.append",
+                            "https://www.googleapis.com/auth/monitoring.write"
+                        ]
+                    },
+                    "zone": "asia-south1-c"
+                },
+                "outputs": {
+                    "__meta": "{\"e2bfb730-ecaa-11e6-8f88-34363bc7c4c0\":{\"create\":1200000000000,\"delete\":1200000000000,\"update\":1200000000000},\"schema_version\":\"6\"}",
+                    "advancedMachineFeatures": null,
+                    "attachedDisks": [],
+                    "bootDisk": {
+                        "autoDelete": true,
+                        "deviceName": "pulumi",
+                        "diskEncryptionKeyRaw": {
+                            "4dabf18193072939515e22adb298388d": "1b47061264138c4ac30d75fd1eb44270",
+                            "ciphertext": "AAABAOs51vRlOQ7sPef8BRabec0fS3w2gy1AVp/P9cVIFQ=="
+                        },
+                        "diskEncryptionKeySha256": "",
+                        "initializeParams": {
+                            "image": "https://www.googleapis.com/compute/beta/projects/debian-cloud/global/images/debian-11-bullseye-v20230615",
+                            "labels": {},
+                            "size": 10,
+                            "type": "pd-balanced"
+                        },
+                        "kmsKeySelfLink": "",
+                        "mode": "READ_WRITE",
+                        "source": "https://www.googleapis.com/compute/v1/projects/nikhils-playground-010897/zones/asia-south1-c/disks/pulumi"
+                    },
+                    "canIpForward": false,
+                    "confidentialInstanceConfig": {
+                        "enableConfidentialCompute": false
+                    },
+                    "cpuPlatform": "Intel Broadwell",
+                    "currentStatus": "RUNNING",
+                    "deletionProtection": false,
+                    "description": "",
+                    "enableDisplay": false,
+                    "guestAccelerators": [],
+                    "hostname": "",
+                    "id": "projects/nikhils-playground-010897/zones/asia-south1-c/instances/pulumi",
+                    "instanceId": "18703799718886783",
+                    "labelFingerprint": "42WmSpB8rSM=",
+                    "labels": {},
+                    "machineType": "e2-micro",
+                    "metadata": {},
+                    "metadataFingerprint": "lWoriGZ613k=",
+                    "minCpuPlatform": "",
+                    "name": "pulumi",
+                    "networkInterfaces": [
+                        {
+                            "accessConfigs": [
+                                {
+                                    "natIp": "35.244.53.147",
+                                    "networkTier": "PREMIUM",
+                                    "publicPtrDomainName": ""
+                                }
+                            ],
+                            "aliasIpRanges": [],
+                            "ipv6AccessConfigs": [],
+                            "ipv6AccessType": "",
+                            "name": "nic0",
+                            "network": "https://www.googleapis.com/compute/v1/projects/nikhils-playground-010897/global/networks/default",
+                            "networkIp": "10.160.0.2",
+                            "nicType": "",
+                            "queueCount": 0,
+                            "stackType": "IPV4_ONLY",
+                            "subnetwork": "https://www.googleapis.com/compute/v1/projects/nikhils-playground-010897/regions/asia-south1/subnetworks/default",
+                            "subnetworkProject": "nikhils-playground-010897"
+                        }
+                    ],
+                    "networkPerformanceConfig": null,
+                    "project": "nikhils-playground-010897",
+                    "reservationAffinity": {
+                        "specificReservation": null,
+                        "type": "ANY_RESERVATION"
+                    },
+                    "resourcePolicies": null,
+                    "scheduling": {
+                        "automaticRestart": true,
+                        "instanceTerminationAction": "",
+                        "maintenanceInterval": "",
+                        "maxRunDuration": null,
+                        "minNodeCpus": 0,
+                        "nodeAffinities": [],
+                        "onHostMaintenance": "MIGRATE",
+                        "preemptible": false,
+                        "provisioningModel": "STANDARD"
+                    },
+                    "scratchDisks": [],
+                    "selfLink": "https://www.googleapis.com/compute/v1/projects/nikhils-playground-010897/zones/asia-south1-c/instances/pulumi",
+                    "serviceAccount": {
+                        "email": "776508433270-compute@developer.gserviceaccount.com",
+                        "scopes": [
+                            "https://www.googleapis.com/auth/devstorage.read_only",
+                            "https://www.googleapis.com/auth/logging.write",
+                            "https://www.googleapis.com/auth/service.management.readonly",
+                            "https://www.googleapis.com/auth/servicecontrol",
+                            "https://www.googleapis.com/auth/trace.append",
+                            "https://www.googleapis.com/auth/monitoring.write"
+                        ]
+                    },
+                    "shieldedInstanceConfig": {
+                        "enableIntegrityMonitoring": true,
+                        "enableSecureBoot": false,
+                        "enableVtpm": true
+                    },
+                    "tags": [],
+                    "tagsFingerprint": "42WmSpB8rSM=",
+                    "zone": "asia-south1-c"
+                },
+                "parent": "urn:pulumi:dev::pulum::pulumi:pulumi:Stack::pulum-dev",
+                "protect": true,
+                "provider": "urn:pulumi:dev::pulum::pulumi:providers:gcp::default_6_59_0::d4be65f7-8c1f-4bc6-9924-3e1abe2c225a"
+            }
+        ]
+    }
+}

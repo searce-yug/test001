@@ -1,0 +1,13 @@
+{
+	"resources": [{
+			"type": "gcp:compute/instance:Instance",
+			"name": "pulumi",
+			"id": "projects/nikhils-playground-010897/zones/asia-south1-c/instances/pulumi"
+		},
+		{
+			"type": "gcp:serviceAccount/account:Account",
+			"name": "gti-terraform",
+			"id": "projects/nikhils-playground-010897/serviceAccounts/gti-terraform@nikhils-playground-010897.iam.gserviceaccount.com"
+		}
+	]
+}

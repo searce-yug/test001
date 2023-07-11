@@ -1,0 +1,4 @@
+config:
+  gcp:project: nikhils-playground-010897
+  github:repo: searce-yug/discord-bot
+  pulum:cloud.organization: abc
